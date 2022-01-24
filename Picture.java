@@ -11,7 +11,7 @@
  */
 public class Picture
 {
-    private Square wall;
+    private Square background;
     private Square window;
     private Triangle roof;
     private Circle sun;
@@ -22,7 +22,7 @@ public class Picture
      */
     public Picture()
     {
-        wall = new Square();
+        background = new Square();
         window = new Square();
         roof = new Triangle();  
         sun = new Circle();
@@ -35,10 +35,11 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(120);
-            wall.makeVisible();
+            background.moveHorizontal(-350);
+            background.moveVertical(-300);
+            background.changeSize(550);
+            background.makeVisible();
+            background.changeColor("gray");
             
             window.changeColor("black");
             window.moveHorizontal(-120);
@@ -65,7 +66,7 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        wall.changeColor("black");
+        background.changeColor("black");
         window.changeColor("white");
         roof.changeColor("black");
         sun.changeColor("black");
@@ -76,7 +77,7 @@ public class Picture
      */
     public void setColor()
     {
-        wall.changeColor("red");
+        background.changeColor("gray");
         window.changeColor("black");
         roof.changeColor("green");
         sun.changeColor("yellow");
